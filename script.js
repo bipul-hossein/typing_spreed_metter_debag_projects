@@ -7,7 +7,7 @@ const modalBackground = document.getElementById("modal-background");
 
 // variables
 let userText = "";
-let errorCount = 0;
+let errorCount=0;
 let startTime;
 let questionText = "";
 
@@ -77,6 +77,8 @@ const gameOver = () => {
   // clear user text
   display.innerHTML = "";
   // make it inactive
+
+  console.log(errorCount)
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
