@@ -12,7 +12,7 @@ let startTime;
 let questionText = "";
 
 // Load and display question
-fetch("./texts.json")
+fetch(`./texts.json`)
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
@@ -140,6 +140,6 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${parseInt(startTime ? timeSpent : 0)} seconds`;
 
 }, 1000);
