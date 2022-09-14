@@ -1,6 +1,8 @@
 const histories = document.getElementById("histories");
 
 function addHistory(questionText, timeTaken, errorCount) {
+
+  console.log(histories)
   const newRow = document.createElement("div");
   newRow.classList.add("card");
 
