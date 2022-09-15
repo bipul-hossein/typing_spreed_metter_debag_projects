@@ -7,7 +7,7 @@ const modalBackground = document.getElementById("modal-background");
 
 // variables
 let userText = "";
-let errorCount=0;
+let errorCount = 0;
 let startTime;
 let questionText = "";
 
@@ -25,6 +25,7 @@ const typeController = (e) => {
 
   // Handle backspace press
   if (newLetter == "Backspace") {
+    errorCount++
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
